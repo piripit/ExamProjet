@@ -35,3 +35,15 @@ document.getElementById("calculer").addEventListener("click", function (event) {
 
   resultat.style.display = "block";
 });
+document
+  .getElementById("calculatorForm")
+  .addEventListener("submit", function (event) {
+    var montant = document.getElementById("montant").value;
+    var taux = document.getElementById("taux").value;
+    var duree = document.getElementById("durée").value;
+
+    if (montant === "" || taux === "" || duree === "") {
+      event.preventDefault();
+      document.getElementById("errorMessage").style.display = "block";
+    }
+  });

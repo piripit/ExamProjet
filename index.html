@@ -8,10 +8,13 @@
   </head>
 
   <body>
+    <header>
+      <img src="img/Fichier 2-8 1.png" alt="" />
+    </header>
     <div class="container">
       <div class="calculatrice">
         <h1>Calculatrice prêt immobilier</h1>
-        <form action="" class="formulaire">
+        <form action="" class="formulaire" id="calculatorForm">
           <div class="form">
             <div class="montant">
               <label for="">Montant emprunté</label>
@@ -34,6 +37,12 @@
             <button type="submit" id="calculer">Calculer</button>
           </div>
         </form>
+        <p
+          id="errorMessage"
+          style="color: var(-color-orange-microlead); display: none"
+        >
+          Veuillez remplir tous les champs obligatoires.
+        </p>
       </div>
     </div>
     <div class="resultat" id="resultat" style="display: none">
@@ -51,6 +60,9 @@
         </thead>
         <tbody id="table-body"></tbody>
       </table>
+      <button id="download-pdf" style="display: block; margin: 20px auto">
+        Télécharger en PDF
+      </button>
     </div>
 
     <script src="JavaScript/Script.js"></script>

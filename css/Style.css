@@ -30,8 +30,8 @@ header {
 .calculatrice {
     background-color: #fff;
     padding: 20px;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ddd;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     width: 1000px;
     height: 400px;
     margin: 0 auto;
@@ -170,3 +170,25 @@ h2 {
     margin-top: 10px;
 
 }
+
+.resultat {
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ddd;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+button#download-pdf {
+    display: block;
+    margin: 20px auto;
+    align-self: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-blueact-microlead);
+    color: #fff;
+    cursor: pointer;
+  }
