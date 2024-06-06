@@ -1,0 +1,142 @@
+:root {
+    --color-blue-microlead: #234B68;
+    --color-black-microlead: #030303;
+    --color-white-microlead: #fff;
+    --color-grey-microlead: #4B5563;
+    --color-orange-microlead: #FF822E;
+    --color-blueact-microlead: #29517F;
+
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculatrice {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.formulaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    color: var(--color-blueact-microlead);
+}
+
+input[type="number"] {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    align-self: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-blueact-microlead);
+    color: #fff;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-blue-microlead);
+}
+
+h1 {
+    text-align: center;
+    color: var(--color-blueact-microlead);
+    padding-bottom: 20px;
+    margin-top: 10px;
+}
+
+.montant label {
+    margin-right: 100px;
+}
+
+.taux label {
+    margin-right: 130px;
+}
+
+.durée label {
+    margin-right: 58px;
+}
+
+.durée {
+    padding-bottom: 60px;
+}
+
+.taux {
+    padding-bottom: 0px;
+}
+
+.montant {
+    display: flex;
+    align-items: center;
+}
+
+.montant input[type="number"] {
+    margin-right: -20px;
+    /* Pour rapprocher l'input du symbole € */
+}
+
+.euro-symbol {
+    background-color: var(--color-blueact-microlead);
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    height: 28px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white-microlead);
+    border-radius: 0 10px 10px 0;
+}
+
+.taux {
+    display: flex;
+    align-items: center;
+}
+
+.taux input[type="number"] {
+    margin-right: -20px;
+
+}
+
+.durée {
+    display: flex;
+    align-items: center;
+}
+
+.durée input[type="number"] {
+    margin-right: -20px;
+
+}
