@@ -22,7 +22,6 @@
                 type="text"
                 id="montant"
                 placeholder="100000"
-                pattern="[0-9]*"
                 inputmode="numeric"
                 required
               />
@@ -35,8 +34,8 @@
                 type="text"
                 id="taux"
                 placeholder="1.2"
-                pattern="[0-9]*"
-                inputmode="numeric"
+                pattern="^[0-9]+(\.[0-9]+)?$"
+                inputmode="decimal"
                 required
               />
               <span class="euro-symbol">%</span>
@@ -48,7 +47,6 @@
                 type="text"
                 id="durée"
                 placeholder="15"
-                pattern="[0-9]*"
                 inputmode="numeric"
                 required
               />
@@ -67,25 +65,29 @@
       </div>
     </div>
     <div class="resultat" id="resultat" style="display: none">
-      <h2 style="text-align: center">Tableau d'amortissement</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Mois</th>
-            <th>Solde Initial</th>
-            <th>Échéance</th>
-            <th>Intérêt</th>
-            <th>Amortissement</th>
-            <th>Solde Restant</th>
-          </tr>
-        </thead>
-        <tbody id="table-body"></tbody>
-      </table>
+      <div id="table-container">
+        <h2 style="text-align: center">Tableau d'amortissement</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Mois</th>
+              <th>Solde Initial</th>
+              <th>Échéance</th>
+              <th>Intérêt</th>
+              <th>Amortissement</th>
+              <th>Solde Restant</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+
       <button id="download-pdf" style="display: block; margin: 20px auto">
         Télécharger en PDF
       </button>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="JavaScript/Script.js"></script>
   </body>
 </html>

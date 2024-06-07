@@ -202,3 +202,32 @@ button#download-pdf {
 .text p {
     padding-bottom: 20px;
 }
+.responsive{
+    background-color: var(--color-blueact-microlead);
+
+}
+@media(max-width:798px){
+    .container{
+        
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        text-align: center;
+        color: var(--color-blueact-microlead);
+        
+    }
+    .calculatrice{
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            border: 2px solid #ddd;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);       
+    }
+    .form{
+         flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+}
