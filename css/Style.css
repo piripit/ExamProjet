@@ -53,7 +53,7 @@ label {
     color: var(--color-blueact-microlead);
 }
 
-input[type="number"] {
+input[type="text"] {
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -62,14 +62,15 @@ input[type="number"] {
 }
 
 button[type="submit"] {
-    margin-top: 20px;
+    margin-top: 25px;
     align-self: center;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: var(--color-blueact-microlead);
     color: #fff;
     cursor: pointer;
+    width: 100px;
 }
 
 button[type="submit"]:hover {
@@ -96,7 +97,7 @@ h1 {
 }
 
 .durée {
-    padding-bottom: 60px;
+    padding-bottom: 20px;
 }
 
 .taux {
@@ -108,7 +109,7 @@ h1 {
     align-items: center;
 }
 
-.montant input[type="number"] {
+.montant input[type="text"] {
     margin-right: -20px;
     /* Pour rapprocher l'input du symbole € */
 }
@@ -132,7 +133,7 @@ h1 {
     align-items: center;
 }
 
-.taux input[type="number"] {
+.taux input[type="text"] {
     margin-right: -20px;
 
 }
@@ -142,7 +143,7 @@ h1 {
     align-items: center;
 }
 
-.durée input[type="number"] {
+.durée input[type="text"] {
     margin-right: -20px;
 
 }
@@ -181,6 +182,7 @@ h2 {
     margin: 0 auto;
     margin-bottom: 20px;
 }
+
 button#download-pdf {
     display: block;
     margin: 20px auto;
@@ -191,4 +193,12 @@ button#download-pdf {
     background-color: var(--color-blueact-microlead);
     color: #fff;
     cursor: pointer;
-  }
+}
+
+.error-message {
+    color: var(--color-orange-microlead);
+}
+
+.text p {
+    padding-bottom: 20px;
+}

@@ -1,9 +1,27 @@
 document.getElementById("calculer").addEventListener("click", function (event) {
   event.preventDefault();
 
-  const montant = parseFloat(document.getElementById("montant").value);
-  const taux = parseFloat(document.getElementById("taux").value) / 100;
-  const duree = parseInt(document.getElementById("durée").value) * 12;
+  const montantInput = document.getElementById("montant");
+  const tauxInput = document.getElementById("taux");
+  const dureeInput = document.getElementById("durée");
+
+  if (!verifierChamps()) {
+    document.getElementById("erreur").style.display = "block";
+    document.getElementById("resultat").style.display = "none";
+    return;
+  }
+
+  if (!montantInput.value || !tauxInput.value || !dureeInput.value) {
+    document.getElementById("erreur").style.display = "block";
+    montantInput.style.border = "2px solid orange";
+    tauxInput.style.border = "2px solid orange";
+    dureeInput.style.border = "2px solid orange";
+    return;
+  }
+
+  const montant = parseFloat(montantInput.value);
+  const taux = parseFloat(tauxInput.value) / 100;
+  const duree = parseInt(dureeInput.value) * 12;
 
   const resultat = document.getElementById("resultat");
   const tbody = document.getElementById("table-body");
@@ -19,31 +37,52 @@ document.getElementById("calculer").addEventListener("click", function (event) {
     const soldeRestant = solde - amortissement;
 
     const row = `
-        <tr>
-          <td>${mois}</td>
-          <td>${solde.toFixed(2)} €</td>
-          <td>${mensualite.toFixed(2)} €</td>
-          <td>${interet.toFixed(2)} €</td>
-          <td>${amortissement.toFixed(2)} €</td>
-          <td>${soldeRestant.toFixed(2)} €</td>
-        </tr>
-      `;
+          <tr>
+            <td>${mois}</td>
+            <td>${solde.toFixed(2)} €</td>
+            <td>${mensualite.toFixed(2)} €</td>
+            <td>${interet.toFixed(2)} €</td>
+            <td>${amortissement.toFixed(2)} €</td>
+            <td>${soldeRestant.toFixed(2)} €</td>
+          </tr>
+        `;
 
     tbody.insertAdjacentHTML("beforeend", row);
     solde = soldeRestant;
   }
 
   resultat.style.display = "block";
+  document.getElementById("erreur").style.display = "none";
+  montantInput.style.border = "";
+  tauxInput.style.border = "";
+  dureeInput.style.border = "";
 });
-document
-  .getElementById("calculatorForm")
-  .addEventListener("submit", function (event) {
-    var montant = document.getElementById("montant").value;
-    var taux = document.getElementById("taux").value;
-    var duree = document.getElementById("durée").value;
 
-    if (montant === "" || taux === "" || duree === "") {
-      event.preventDefault();
-      document.getElementById("errorMessage").style.display = "block";
+function verifierChamps() {
+  const montantInput = document.getElementById("montant");
+  const tauxInput = document.getElementById("taux");
+  const dureeInput = document.getElementById("durée");
+
+  if (!montantInput.value || !tauxInput.value || !dureeInput.value) {
+    montantInput.style.border = "2px solid orange";
+    tauxInput.style.border = "2px solid orange";
+    dureeInput.style.border = "2px solid orange";
+    return false;
+  }
+
+  montantInput.style.border = "";
+  tauxInput.style.border = "";
+  dureeInput.style.border = "";
+  return true;
+}
+
+const inputs = document.querySelectorAll('input[type="text"]');
+
+inputs.forEach((input) => {
+  input.addEventListener("input", (event) => {
+    const valeur = event.target.value;
+    if (!/^[0-9]+$/.test(valeur)) {
+      event.target.value = valeur.replace(/[^0-9]/g, "");
     }
   });
+});
