@@ -41,21 +41,34 @@ document.addEventListener("DOMContentLoaded", function () {
   function verifierChamps() {
     let isValid = true;
 
-    if (!montantInput.value) {
+    const montantValue = parseInt(montantInput.value);
+    if (!montantInput.value || montantValue < 1000) {
       montantInput.style.border = "2px solid orange";
       isValid = false;
     } else {
       montantInput.style.border = "";
     }
 
-    if (!tauxInput.value || !/^\d+(\.\d+)?$/.test(tauxInput.value)) {
+    const tauxValue = parseFloat(tauxInput.value);
+    if (
+      !tauxInput.value ||
+      !/^\d+(\.\d+)?$/.test(tauxInput.value) ||
+      tauxValue <= 0
+    ) {
       tauxInput.style.border = "2px solid orange";
       isValid = false;
     } else {
       tauxInput.style.border = "";
     }
 
-    if (!dureeInput.value) {
+    const dureeValue = parseInt(dureeInput.value);
+    if (
+      !dureeInput.value ||
+      isNaN(dureeValue) ||
+      dureeValue < 1 ||
+      dureeValue > 30 ||
+      dureeValue === 0
+    ) {
       dureeInput.style.border = "2px solid orange";
       isValid = false;
     } else {
@@ -86,16 +99,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (let mois = 1; mois <= duree; mois++) {
       const interet = solde * (taux / 12);
-      const amortissement = mensualite - interet;
-      const soldeRestant = solde - amortissement;
+      let amortissement = mensualite - interet;
+      let soldeRestant = solde - amortissement;
 
       const row = `
-        <tr>
-          <td>${mois}</td>
-          <td>${solde.toFixed(2)} €</td>
-          <td>${mensualite.toFixed(2)} €</td>
-          <td>${interet.toFixed(2)} €</td>
-          <td>${amortissement.toFixed(2)} €</td>
+      <tr>
+      <td>${mois}</td>
+      <td>${solde.toFixed(2)} €</td>
+      <td>${mensualite.toFixed(2)} €</td>
+      <td>${interet.toFixed(2)} €</td>
+      <td>${amortissement.toFixed(2)} €</td>
           <td>${soldeRestant.toFixed(2)} €</td>
         </tr>
       `;
@@ -105,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     resultat.style.display = "block";
+    console.log(genererTableauAmortissement);
   }
 
   function validerChiffres(event) {
