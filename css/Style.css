@@ -25,7 +25,7 @@ header {
     align-items: center;
     margin-top: 20px;
     padding-top: 20px;
-    
+
 }
 
 .calculatrice {
@@ -52,6 +52,10 @@ header {
 label {
     margin-bottom: 10px;
     color: var(--color-blueact-microlead);
+}
+
+.input-container {
+    display: flex;
 }
 
 input[type="text"] {
@@ -157,7 +161,7 @@ table {
 
 table th,
 table td {
-    text-align: left;
+    text-align: center;
     padding: 8px;
 }
 
@@ -170,6 +174,7 @@ h2 {
     color: var(--color-blueact-microlead);
     padding-bottom: 20px;
     margin-top: 10px;
+    text-align: center;
 
 }
 
@@ -182,7 +187,7 @@ h2 {
     height: auto;
     margin: 0 auto;
     margin-top: 20px;
-    
+
 }
 
 button#download-pdf {
@@ -204,5 +209,4 @@ button#download-pdf {
 .text p {
     padding-bottom: 20px;
 }
-
 

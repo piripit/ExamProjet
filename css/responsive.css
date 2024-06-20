@@ -1,0 +1,73 @@
+@media (max-width:375px) {
+    .container {
+        flex: 0 0 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .calculatrice, .resultat {
+        width: 250px;
+        margin: 0 auto;
+        height: auto;
+         
+    }
+
+    .resultat {
+    }
+    
+    .formulaire {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .form {
+        flex: 0 0 50%;
+        align-items: center;
+    }
+
+    .montant,
+    .durée,
+    .taux {
+        flex: 0 0 100%;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .montant label,
+    .taux label,
+    .durée label {
+        margin-right: 0;
+    }
+    
+    #table-container {
+        overflow-x: auto;
+        width: 100%;
+        
+    }
+
+    table {
+        width: 600px; 
+    }
+
+    table th,
+    table td {
+        text-align: center;
+        padding: 8px;
+    }
+
+    table th {
+        color: var(--color-blue-microlead);
+        text-align: center;
+    }
+    button {
+        margin: 0;
+    }
+    label{
+        margin-bottom: 10px;
+    }
+    
+    
+  
+}
