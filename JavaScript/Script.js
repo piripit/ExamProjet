@@ -136,14 +136,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function telechargerPDF() {
-    const tableElement = document.getElementById("table-container");
+    const tableElement = document.getElementById("resultat");
     const originalWidth = tableElement.style.width;
 
     tableElement.style.width = "600px";
 
     html2canvas(tableElement).then(function (canvas) {
       tableElement.style.width = originalWidth;
-
       const imgData = canvas.toDataURL("image/png");
       const pdf = new jspdf.jsPDF("p", "mm", "a4");
       const imgWidth = pdf.internal.pageSize.getWidth();

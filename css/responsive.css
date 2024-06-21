@@ -1,4 +1,5 @@
 @media (max-width:375px) {
+   
     .container {
         flex: 0 0 100%;
         margin: 0;
@@ -12,8 +13,6 @@
          
     }
 
-    .resultat {
-    }
     
     .formulaire {
         flex: 0 0 100%;
@@ -46,11 +45,96 @@
         width: 100%;
         
     }
+    #table-container::-webkit-scrollbar {
+        height: 5px;
+        width: 20%; 
+    }
 
+    
+
+    #table-container::-webkit-scrollbar-thumb {
+        background-color: var(--color-blue-microlead); 
+        border-radius: 10px; 
+    }
+    
     table {
         width: 600px; 
     }
 
+    table th,
+    table td {
+        text-align: center;
+        padding: 8px;
+    }
+    
+    table th {
+        color: var(--color-blue-microlead);
+        text-align: center;
+    }
+    button {
+        margin: 0;
+    }
+    label{
+        margin-bottom: 10px;
+    }
+    h2{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        
+    }
+    .resultat {
+        margin-top: 20px;
+    }
+    element.style{
+        margin-right: 0;
+    }
+    
+}
+
+@media (max-width:850px) {
+    .container {
+        flex: 0 0 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .calculatrice, .resultat {
+        width: 550px;
+        margin: 0 auto;
+        height: auto;
+        
+    }
+    
+    .resultat {
+        margin-top: 20px;
+    }
+    
+    
+    .formulaire {
+        flex: 0 0 100%;
+        max-width: 100%;
+        
+    }
+    
+
+    .montant,
+    .durée,
+    .taux {
+        flex: 0 0 100%;
+        
+        justify-content: center;
+        text-align: center;
+    
+    }
+    
+    
+    
+    #table-container {
+        width: 100%;
+        
+    }
+   
     table th,
     table td {
         text-align: center;
@@ -67,7 +151,149 @@
     label{
         margin-bottom: 10px;
     }
+    h2{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    element.style{
+        margin-left: 0;
+    }
     
-    
-  
 }
+@media (max-width:1119px) {
+    .container {
+        flex: 0 0 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .calculatrice, .resultat {
+        width: 650px;
+        margin: 0 auto;
+        height: auto;
+        
+    }
+    
+    .resultat {
+        margin-top: 20px;
+    }
+    
+    
+    .formulaire {
+        flex: 0 0 100%;
+        max-width: 100%;
+        
+    }
+    
+
+    .montant,
+    .durée,
+    .taux {
+        flex: 0 0 100%;
+        
+        justify-content: center;
+        text-align: center;
+    
+    }
+    
+    
+    
+    #table-container {
+        width: 100%;
+        
+    }
+   
+    table th,
+    table td {
+        text-align: center;
+        padding: 8px;
+    }
+
+    table th {
+        color: var(--color-blue-microlead);
+        text-align: center;
+    }
+    button {
+        margin: 0;
+    }
+    label{
+        margin-bottom: 10px;
+    }
+    h2{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    element.style{
+        margin-left: 0;
+    }
+    
+}
+@media (max-width:689px) {
+    .container {
+        flex: 0 0 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .calculatrice, .resultat {
+        width: 550px;
+        margin: 0 auto;
+        height: auto;
+        
+    }
+    
+    .resultat {
+        margin-top: 20px;
+    }
+    
+    
+    .formulaire {
+        flex: 0 0 100%;
+        max-width: 100%;
+        
+    }
+    
+
+    .montant,
+    .durée,
+    .taux {
+        flex: 0 0 100%;
+        justify-content: center;
+        text-align: center;
+    
+    }
+    
+    
+    
+    #table-container {
+        width: 100%;
+        
+    }
+   
+    table th,
+    table td {
+        text-align: center;
+        padding: 8px;
+    }
+
+    table th {
+        color: var(--color-blue-microlead);
+        text-align: center;
+    }
+    button {
+        margin: 0;
+    }
+    label{
+        margin-bottom: 10px;
+    }
+    h2{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    
+    
+}
+
