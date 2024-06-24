@@ -1,299 +1,302 @@
-@media (max-width:375px) {
-   
-    .container {
-        flex: 0 0 100%;
-        margin: 0;
-        padding: 0;
-    }
+@media (max-width: 375px) {
+  .container {
+    flex: 0 0 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+  }
 
-    .calculatrice, .resultat {
-        width: 250px;
-        margin: 0 auto;
-        height: auto;
-         
-    }
+  .calculatrice
+   {
+    width: 285px;
+    margin: 0 auto;
+    height: auto;
+    padding: 0;
+  }
+  
+  .resultat {
+    width: 285px;
+    margin: 0 auto;
+    height: auto;
+    padding: 0;
+  }
 
-    
-    .formulaire {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-    
-    .form {
-        flex: 0 0 50%;
-        align-items: center;
-    }
+  .formulaire {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 
-    .montant,
-    .durée,
-    .taux {
-        flex: 0 0 100%;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .montant label,
-    .taux label,
-    .durée label {
-        margin-right: 0;
-    }
-    
-    #table-container {
-        overflow-x: auto;
-        width: 100%;
-        
-    }
-    #table-container::-webkit-scrollbar {
-        height: 5px;
-        width: 20%; 
-    }
+  .form {
+    flex: 0 0 50%;
+    align-items: center;
+  }
 
+  .montant,
+  .durée,
+  .taux {
+    flex: 0 0 100%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     
+  }
 
-    #table-container::-webkit-scrollbar-thumb {
-        background-color: var(--color-blue-microlead); 
-        border-radius: 10px; 
-    }
-    
-    table {
-        width: 600px; 
-    }
+  .montant label,
+  .taux label,
+  .durée label {
+    margin-right: 0;
+  }
 
-    table th,
-    table td {
-        text-align: center;
-        padding: 8px;
-    }
-    
-    table th {
-        color: var(--color-blue-microlead);
-        text-align: center;
-    }
-    button {
-        margin: 0;
-    }
-    label{
-        margin-bottom: 10px;
-    }
-    h2{
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        
-    }
-    .resultat {
-        margin-top: 20px;
-    }
-    element.style{
-        margin-right: 0;
-    }
-    
+  #table-container {
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  #table-container::-webkit-scrollbar {
+    height: 5px;
+    width: 20%;
+  }
+
+  #table-container::-webkit-scrollbar-thumb {
+    background-color: var(--color-blue-microlead);
+    border-radius: 10px;
+  }
+
+  table {
+    width: 600px;
+  }
+
+  table th,
+  table td {
+    text-align: center;
+    padding: 8px;
+  }
+
+  table th {
+    color: var(--color-blue-microlead);
+    text-align: center;
+  }
+
+  button {
+    margin: 0;
+  }
+
+  label {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .resultat {
+    margin-top: 20px;
+  }
+
+  element.style {
+    margin-right: 0;
+  }
+
+  button[type="submit"] {
+    margin-bottom: 10px;
+  }
+  .text p{
+    font-size: 15px;
+    padding: 0;
+  }
 }
 
-@media (max-width:850px) {
-    .container {
-        flex: 0 0 100%;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .calculatrice, .resultat {
-        width: 550px;
-        margin: 0 auto;
-        height: auto;
-        
-    }
-    
-    .resultat {
-        margin-top: 20px;
-    }
-    
-    
-    .formulaire {
-        flex: 0 0 100%;
-        max-width: 100%;
-        
-    }
-    
+@media (max-width: 850px) {
+  .container {
+    flex: 0 0 100%;
+    margin: 0;
+    padding: 0;
+  }
 
-    .montant,
-    .durée,
-    .taux {
-        flex: 0 0 100%;
-        
-        justify-content: center;
-        text-align: center;
-    
-    }
-    
-    
-    
-    #table-container {
-        width: 100%;
-        
-    }
-   
-    table th,
-    table td {
-        text-align: center;
-        padding: 8px;
-    }
+  .calculatrice,
+  .resultat {
+    width: 550px;
+    margin: 0 auto;
+    height: auto;
+  }
 
-    table th {
-        color: var(--color-blue-microlead);
-        text-align: center;
-    }
-    button {
-        margin: 0;
-    }
-    label{
-        margin-bottom: 10px;
-    }
-    h2{
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-    element.style{
-        margin-left: 0;
-    }
-    
-}
-@media (max-width:1119px) {
-    .container {
-        flex: 0 0 100%;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .calculatrice, .resultat {
-        width: 650px;
-        margin: 0 auto;
-        height: auto;
-        
-    }
-    
-    .resultat {
-        margin-top: 20px;
-    }
-    
-    
-    .formulaire {
-        flex: 0 0 100%;
-        max-width: 100%;
-        
-    }
-    
+  .resultat {
+    margin-top: 20px;
+  }
 
-    .montant,
-    .durée,
-    .taux {
-        flex: 0 0 100%;
-        
-        justify-content: center;
-        text-align: center;
-    
-    }
-    
-    
-    
-    #table-container {
-        width: 100%;
-        
-    }
-   
-    table th,
-    table td {
-        text-align: center;
-        padding: 8px;
-    }
+  .formulaire {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 
-    table th {
-        color: var(--color-blue-microlead);
-        text-align: center;
-    }
-    button {
-        margin: 0;
-    }
-    label{
-        margin-bottom: 10px;
-    }
-    h2{
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-    element.style{
-        margin-left: 0;
-    }
-    
-}
-@media (max-width:689px) {
-    .container {
-        flex: 0 0 100%;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .calculatrice, .resultat {
-        width: 550px;
-        margin: 0 auto;
-        height: auto;
-        
-    }
-    
-    .resultat {
-        margin-top: 20px;
-    }
-    
-    
-    .formulaire {
-        flex: 0 0 100%;
-        max-width: 100%;
-        
-    }
-    
+  .montant,
+  .durée,
+  .taux {
+    flex: 0 0 100%;
 
-    .montant,
-    .durée,
-    .taux {
-        flex: 0 0 100%;
-        justify-content: center;
-        text-align: center;
-    
-    }
-    
-    
-    
-    #table-container {
-        width: 100%;
-        
-    }
-   
-    table th,
-    table td {
-        text-align: center;
-        padding: 8px;
-    }
+    justify-content: center;
+    text-align: center;
+  }
 
-    table th {
-        color: var(--color-blue-microlead);
-        text-align: center;
-    }
-    button {
-        margin: 0;
-    }
-    label{
-        margin-bottom: 10px;
-    }
-    h2{
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-    
-    
+  #table-container {
+    width: 100%;
+  }
+
+  table th,
+  table td {
+    text-align: center;
+    padding: 8px;
+  }
+
+  table th {
+    color: var(--color-blue-microlead);
+    text-align: center;
+  }
+
+  button {
+    margin: 0;
+  }
+
+  label {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  element.style {
+    margin-left: 0;
+  }
 }
 
+@media (max-width: 1119px) {
+  .container {
+    flex: 0 0 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .calculatrice,
+  .resultat {
+    width: 650px;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .resultat {
+    margin-top: 20px;
+  }
+
+  .formulaire {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .montant,
+  .durée,
+  .taux {
+    flex: 0 0 100%;
+
+    justify-content: center;
+    text-align: center;
+  }
+
+  #table-container {
+    width: 100%;
+  }
+
+  table th,
+  table td {
+    text-align: center;
+    padding: 8px;
+  }
+
+  table th {
+    color: var(--color-blue-microlead);
+    text-align: center;
+  }
+
+  button {
+    margin: 0;
+  }
+
+  label {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  element.style {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 689px) {
+  .container {
+    flex: 0 0 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .calculatrice,
+  .resultat {
+    width: 550px;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .resultat {
+    margin-top: 20px;
+  }
+
+  .formulaire {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .montant,
+  .durée,
+  .taux {
+    flex: 0 0 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #table-container {
+    width: 100%;
+  }
+
+  table th,
+  table td {
+    text-align: center;
+    padding: 8px;
+  }
+
+  table th {
+    color: var(--color-blue-microlead);
+    text-align: center;
+  }
+
+  button {
+    margin: 0;
+  }
+
+  label {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+}
