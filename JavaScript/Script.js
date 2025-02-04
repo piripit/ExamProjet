@@ -100,21 +100,41 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let mois = 1; mois <= duree; mois++) {
       const interet = solde * (taux / 12);
       let amortissement = mensualite - interet;
+
+      // Vérifiez si le solde restant est inférieur à la mensualité
+      if (solde < mensualite) {
+        amortissement = solde; // Le dernier amortissement est égal au solde restant
+      }
+
       let soldeRestant = solde - amortissement;
+
+      // Si le solde restant devient négatif, ajustez-le à zéro
+      if (soldeRestant < 0) {
+        soldeRestant = 0;
+      }
 
       const row = `
       <tr>
       <td>${mois}</td>
       <td>${solde.toFixed(2)} €</td>
-      <td>${mensualite.toFixed(2)} €</td>
+      <td>${
+        mois === duree && solde < mensualite
+          ? solde.toFixed(2)
+          : mensualite.toFixed(2)
+      } €</td>
       <td>${interet.toFixed(2)} €</td>
       <td>${amortissement.toFixed(2)} €</td>
-          <td>${soldeRestant.toFixed(2)} €</td>
-        </tr>
+      <td>${soldeRestant.toFixed(2)} €</td>
+      </tr>
       `;
 
       tbody.insertAdjacentHTML("beforeend", row);
       solde = soldeRestant;
+
+      // Si le solde est déjà à zéro, on peut sortir de la boucle
+      if (solde <= 0) {
+        break;
+      }
     }
 
     resultat.style.display = "block";
